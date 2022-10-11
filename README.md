@@ -1,4 +1,4 @@
-Ejemplo de README. Falta completarlo.
+Ejemplo de README. Falta completarlo..
 
 
 <!-- TABLE OF CONTENTS -->
