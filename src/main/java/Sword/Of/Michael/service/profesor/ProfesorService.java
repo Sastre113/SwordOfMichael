@@ -6,6 +6,8 @@ package Sword.Of.Michael.service.profesor;
 import java.util.Date;
 import java.util.UUID;
 
+import org.springframework.stereotype.Service;
+
 import Sword.Of.Michael.model.dto.PeticionServiceDTO;
 import Sword.Of.Michael.model.dto.RespuestaServiceDTO;
 import Sword.Of.Michael.model.entity.TbProfesor;
@@ -16,6 +18,7 @@ import Sword.Of.Michael.repository.IProfesorRepository;
  * @version 0:51:23 - 06/10/2022
  *
  */
+@Service
 public class ProfesorService implements IProfesorService {
 
 	private IProfesorRepository profesorRepository;
