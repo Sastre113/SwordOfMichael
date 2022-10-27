@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import Sword.Of.Michael.model.dto.PeticionServiceDTO;
-import Sword.Of.Michael.model.dto.RespuestaServiceDTO;
+import Sword.Of.Michael.model.dto.PeticionDTO;
+import Sword.Of.Michael.model.dto.RespuestaDTO;
 import Sword.Of.Michael.service.profesor.IProfesorService;
 
 /**
@@ -30,12 +30,12 @@ public class ProfesorController {
 	}
 	
 	@PostMapping(path = "/insertar")
-	public ResponseEntity<RespuestaServiceDTO> insertarProfesor(PeticionServiceDTO peticionDTO){
+	public ResponseEntity<RespuestaDTO> insertarProfesor(PeticionDTO peticionDTO){
 		return ResponseEntity.ok(this.profesorService.insertar(peticionDTO));
 	}
 	
 	@GetMapping(path = "/obtener")
-	public ResponseEntity<RespuestaServiceDTO> obtenerProfesor(PeticionServiceDTO peticionDTO){
+	public ResponseEntity<RespuestaDTO> obtenerProfesor(PeticionDTO peticionDTO){
 		return ResponseEntity.ok(this.profesorService.obtener(peticionDTO));
 	}
 	

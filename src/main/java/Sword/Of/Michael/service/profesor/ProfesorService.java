@@ -3,14 +3,8 @@
  */
 package Sword.Of.Michael.service.profesor;
 
-import java.util.Date;
-import java.util.UUID;
-
 import org.springframework.stereotype.Service;
 
-import Sword.Of.Michael.model.dto.PeticionServiceDTO;
-import Sword.Of.Michael.model.dto.RespuestaServiceDTO;
-import Sword.Of.Michael.model.entity.TbProfesor;
 import Sword.Of.Michael.repository.IProfesorRepository;
 
 /**
@@ -19,47 +13,38 @@ import Sword.Of.Michael.repository.IProfesorRepository;
  *
  */
 @Service
-public class ProfesorService implements IProfesorService {
+public class ProfesorService implements IProfesorService<Object, Object> {
 
 	private IProfesorRepository profesorRepository;
 	
 	public ProfesorService(IProfesorRepository profesorRepository) {
 		this.profesorRepository = profesorRepository;
 	}
-
-	@Override
-	public RespuestaServiceDTO insertar(PeticionServiceDTO peticion) {
-		// TODO Auto-generated method stub
-		
-		TbProfesor profesorEntity = new TbProfesor();
-		profesorEntity.setId(UUID.randomUUID().toString());
-		profesorEntity.setNif(peticion.getNif());
-		profesorEntity.setNombre(peticion.getNombre());
-		profesorEntity.setPrimerApellido(peticion.getPrimerApellido());
-		profesorEntity.setSegundoApellido(peticion.getSegundoApellido());
-		profesorEntity.setFechaAlta(new Date());
-		
-		this.profesorRepository.save(profesorEntity);
-		
-		return IProfesorService.super.insertar(peticion);
-	}
-
-	@Override
-	public RespuestaServiceDTO obtener(PeticionServiceDTO peticion) {
-		// TODO Auto-generated method stub
-		return IProfesorService.super.obtener(peticion);
-	}
-
-	@Override
-	public RespuestaServiceDTO eliminar(PeticionServiceDTO peticion) {
-		// TODO Auto-generated method stub
-		return IProfesorService.super.eliminar(peticion);
-	}
-
-	@Override
-	public RespuestaServiceDTO modificar(PeticionServiceDTO peticion) {
-		// TODO Auto-generated method stub
-		return IProfesorService.super.modificar(peticion);
-	}
-
+	
+	
+	/*
+	 * @Override public RespuestaDTO insertar(PeticionDTO peticion) { // TODO
+	 * Auto-generated method stub
+	 * 
+	 * TbProfesor profesorEntity = new TbProfesor();
+	 * profesorEntity.setId(UUID.randomUUID().toString());
+	 * profesorEntity.setNif(peticion.getNif());
+	 * profesorEntity.setNombre(peticion.getNombre());
+	 * profesorEntity.setPrimerApellido(peticion.getPrimerApellido());
+	 * profesorEntity.setSegundoApellido(peticion.getSegundoApellido());
+	 * profesorEntity.setFechaAlta(new Date());
+	 * 
+	 * this.profesorRepository.save(profesorEntity);
+	 * 
+	 * return null; }
+	 * 
+	 * @Override public RespuestaDTO obtener(PeticionDTO peticion) { // TODO
+	 * Auto-generated method stub return null; }
+	 * 
+	 * @Override public RespuestaDTO eliminar(PeticionDTO peticion) { // TODO
+	 * Auto-generated method stub return null; }
+	 * 
+	 * @Override public RespuestaDTO modificar(PeticionDTO peticion) { // TODO
+	 * Auto-generated method stub return null; }
+	 */
 }

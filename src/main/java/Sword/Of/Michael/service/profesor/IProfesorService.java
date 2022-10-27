@@ -3,8 +3,6 @@
  */
 package Sword.Of.Michael.service.profesor;
 
-import Sword.Of.Michael.model.dto.PeticionServiceDTO;
-import Sword.Of.Michael.model.dto.RespuestaServiceDTO;
 import Sword.Of.Michael.service.CrudService;
 
 /**
@@ -12,6 +10,6 @@ import Sword.Of.Michael.service.CrudService;
  * @version 0:38:38 - 06/10/2022
  *
  */
-public interface IProfesorService extends CrudService<PeticionServiceDTO, RespuestaServiceDTO>{
+public interface IProfesorService<T,R> extends CrudService<T, R>{
 
 }

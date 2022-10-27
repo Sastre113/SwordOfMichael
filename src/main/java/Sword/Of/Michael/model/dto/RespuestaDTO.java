@@ -8,6 +8,6 @@ package Sword.Of.Michael.model.dto;
  * @version 0:49:20 - 06/10/2022
  *
  */
-public class RespuestaServiceDTO {
+public abstract class RespuestaDTO {
 
 }
