@@ -28,7 +28,7 @@ public class ProfesorController {
 		super();
 		this.profesorService = profesorService;
 	}
-	
+	/*
 	@PostMapping(path = "/insertar")
 	public ResponseEntity<RespuestaDTO> insertarProfesor(PeticionDTO peticionDTO){
 		return ResponseEntity.ok(this.profesorService.insertar(peticionDTO));
@@ -38,5 +38,5 @@ public class ProfesorController {
 	public ResponseEntity<RespuestaDTO> obtenerProfesor(PeticionDTO peticionDTO){
 		return ResponseEntity.ok(this.profesorService.obtener(peticionDTO));
 	}
-	
+	*/
 }
