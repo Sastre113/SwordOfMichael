@@ -68,11 +68,6 @@
 			</snapshots>
 		</repository>
 
-		<repository>
-			<id>jakarta.oss.sonatype.org</id>
-			<name>Jakarta OSS Sonatype Staging</name>
-			<url>https://jakarta.oss.sonatype.org/content/repositories/staging</url>
-		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>

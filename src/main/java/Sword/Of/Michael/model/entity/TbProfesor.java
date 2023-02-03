@@ -5,7 +5,6 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -18,7 +17,7 @@ import jakarta.persistence.TemporalType;
 
 
 /**
- * The persistent class for the tb_profesor database table.
+ * The persistent class for the "TB_PROFESOR" database table.
  * 
  */
 @Entity
@@ -31,25 +30,20 @@ public class TbProfesor implements Serializable {
 	private String id;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name="fecha_alta")
-	private Date fechaAlta;
+	private Date fechaalta;
 
-	@Column(name="fecha_baja")
-	private Timestamp fechaBaja;
+	private Timestamp fechabaja;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name="fecha_nacimiento")
-	private Date fechaNacimiento;
+	private Date fechanacimiento;
 
 	private String nif;
 
 	private String nombre;
 
-	@Column(name="primer_apellido")
-	private String primerApellido;
+	private String primerapellido;
 
-	@Column(name="segundo_apellido")
-	private String segundoApellido;
+	private String segundoapellido;
 
 	//bi-directional many-to-many association to TbAsignatura
 	@ManyToMany
@@ -75,28 +69,28 @@ public class TbProfesor implements Serializable {
 		this.id = id;
 	}
 
-	public Date getFechaAlta() {
-		return this.fechaAlta;
+	public Date getFechaalta() {
+		return this.fechaalta;
 	}
 
-	public void setFechaAlta(Date fechaAlta) {
-		this.fechaAlta = fechaAlta;
+	public void setFechaalta(Date fechaalta) {
+		this.fechaalta = fechaalta;
 	}
 
-	public Timestamp getFechaBaja() {
-		return this.fechaBaja;
+	public Timestamp getFechabaja() {
+		return this.fechabaja;
 	}
 
-	public void setFechaBaja(Timestamp fechaBaja) {
-		this.fechaBaja = fechaBaja;
+	public void setFechabaja(Timestamp fechabaja) {
+		this.fechabaja = fechabaja;
 	}
 
-	public Date getFechaNacimiento() {
-		return this.fechaNacimiento;
+	public Date getFechanacimiento() {
+		return this.fechanacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
+	public void setFechanacimiento(Date fechanacimiento) {
+		this.fechanacimiento = fechanacimiento;
 	}
 
 	public String getNif() {
@@ -115,20 +109,20 @@ public class TbProfesor implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public String getPrimerApellido() {
-		return this.primerApellido;
+	public String getPrimerapellido() {
+		return this.primerapellido;
 	}
 
-	public void setPrimerApellido(String primerApellido) {
-		this.primerApellido = primerApellido;
+	public void setPrimerapellido(String primerapellido) {
+		this.primerapellido = primerapellido;
 	}
 
-	public String getSegundoApellido() {
-		return this.segundoApellido;
+	public String getSegundoapellido() {
+		return this.segundoapellido;
 	}
 
-	public void setSegundoApellido(String segundoApellido) {
-		this.segundoApellido = segundoApellido;
+	public void setSegundoapellido(String segundoapellido) {
+		this.segundoapellido = segundoapellido;
 	}
 
 	public List<TbAsignatura> getTbAsignaturas() {

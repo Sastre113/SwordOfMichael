@@ -8,10 +8,10 @@ package Sword.Of.Michael.model.dto;
  * @version 0:49:30 - 06/10/2022
  *
  */
-public abstract class PeticionDTO<ID,T> {
+public abstract class PeticionDTO<ID,OBJECT> {
 
 	private ID id;
-	private T datosAdicionales;
+	private OBJECT datosAdicionales;
 
 	public ID getId() {
 		return id;
@@ -21,11 +21,11 @@ public abstract class PeticionDTO<ID,T> {
 		this.id = id;
 	}
 
-	public T getDatosAdicionales() {
+	public OBJECT getDatosAdicionales() {
 		return datosAdicionales;
 	}
 
-	public void setDatosAdicionales(T datosAdicionales) {
+	public void setDatosAdicionales(OBJECT datosAdicionales) {
 		this.datosAdicionales = datosAdicionales;
 	}
 }

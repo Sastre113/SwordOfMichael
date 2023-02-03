@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 
 /**
- * The persistent class for the tb_asignatura database table.
+ * The persistent class for the "TB_ASIGNATURA" database table.
  * 
  */
 @Entity

@@ -1,8 +1,10 @@
 # Configuración postgreSQL
 spring:  
   jpa:  
-    database-platform: org.hibernate.dialect.PostgreSQLDialect  
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:  
-    url: "jdbc:postgresql://localhost:5432/Infierno"  
-    username: belazar  
-    password: belazar
+    url: "jdbc:postgresql://localhost:5432/Infierno"
+    hikari:
+      schema: "sch_escuela"
+    username: Belazar  
+    password: Belazar13
